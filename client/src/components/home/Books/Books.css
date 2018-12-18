@@ -1,0 +1,21 @@
+
+.RecentBooks-Container
+{
+    width:800px;
+    height:360px;
+    border:1px solid black;
+}
+
+.RecentBooks-block
+{
+display:flex;
+flex-wrap: wrap;
+}
+
+.book-image
+{
+    height:132px;
+    margin-right:12px;
+}
+.Books{display:flex}
+.books-container{display:flex;flex-direction: column}

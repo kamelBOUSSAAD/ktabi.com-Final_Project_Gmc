@@ -1,0 +1,7 @@
+.footer-disposition
+{
+    display:flex;
+    justify-content: space-around;
+}
+.paragraph{
+    text-align: center}

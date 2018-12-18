@@ -1,0 +1,21 @@
+.homeContainer
+{
+width:100%;
+display:flex;
+margin-top:50px;
+margin-bottom:50px;
+border:1px solid black;
+}
+.search
+{
+    width:30%
+}
+
+.Books
+{
+    width:40%
+}
+.topUsers
+{
+    width:30%
+}
