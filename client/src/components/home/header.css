@@ -1,0 +1,25 @@
+.Header-Container
+{
+    width:100%;
+    display:flex;
+    justify-content: space-between
+}
+.header
+{
+    display:flex;
+    justify-content: space-between;
+    margin-left:70px;
+    width:80%;
+
+}
+.login
+{
+display:flex;
+justify-content: space-between;
+
+}
+.header img
+{
+    width:100px;
+    height:55px;
+}
