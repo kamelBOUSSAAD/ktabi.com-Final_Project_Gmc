@@ -1,7 +1,7 @@
 import React from 'react'
-import '../../components/home/recentBooks.css'
 
-const Book=(props)=>{
+
+const Book=()=>{
     return(
         <div className="">
             <img src="https://images.gr-assets.com/books/1474171184l/136251.jpg" 

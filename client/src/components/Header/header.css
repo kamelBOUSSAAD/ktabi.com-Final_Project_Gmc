@@ -2,7 +2,8 @@
 {
     width:100%;
     display:flex;
-    justify-content: space-between
+    justify-content: space-between;
+   
 }
 .header
 {
@@ -10,16 +11,20 @@
     justify-content: space-between;
     margin-left:70px;
     width:80%;
-
-}
-.login
-{
-display:flex;
-justify-content: space-between;
-
 }
 .header img
 {
     width:100px;
     height:55px;
 }
+.loginContainer
+{
+display:flex;
+margin-top:15px;
+margin-left:50px;
+}
+.login 
+{
+    margin-right:10px;
+}
+

@@ -1,0 +1,26 @@
+.searchContainer
+{
+    width:50%px;
+    height:250px;
+    margin-left:20px;
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+}
+.searchBar
+{
+    border-radius: 25px;
+    height: 25px;
+    width: 200px;
+}
+.searchOptions
+{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+.selectStyle
+{
+    width:200px;
+    
+}

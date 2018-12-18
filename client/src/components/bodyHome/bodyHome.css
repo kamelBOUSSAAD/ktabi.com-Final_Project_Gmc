@@ -1,0 +1,23 @@
+.selectStyle
+{
+    width:120px;
+}
+.BooksHeader
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.BooksContainer
+{
+    border: 1px solid black;
+    width: 100%;
+   
+}
+.BooksContent
+{
+    display:flex;
+    flex-direction: column;
+    margin-left:195px
+}
