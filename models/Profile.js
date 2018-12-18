@@ -24,6 +24,11 @@ const ProfileSchema = new Schema({
     type: Number,
     required: true
   },
+  book: {
+    type: Schema.Types.ObjectId,
+    ref: 'books'
+  },
+
   date: {
     type: Date,
     default: Date.now

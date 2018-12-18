@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
-const Schema = mongosse.schema;
+const Schema = mongoose.Schema;
 
 // create schema 
 
-const bookSchema = new Schema = ({
+const BookSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+      },
     title: {
         type: String,
         required: true
@@ -12,31 +16,26 @@ const bookSchema = new Schema = ({
         type: String,
         required: true
     },
-    subject: {
-        type: String,
-        required: true
-    },
     description: {
         type: String,
         required: true
-    },
-    subject: {
-        type: Date,
-        default: Date.now
     },
     operation: {
         type: String,
         required: true
     },
+    categorie: {
+        type: String,
+        required: true
+      },
     rate: {
-        type: Number,
+        type: String,
         default: 0
     },
     date: {
         type: Date,
         default: Date.now
-    },
+    }
+});
 
-})
-
-module.exports = User = mongoose.model(users , bookSchema);
+module.exports = Book = mongoose.model('books', BookSchema);
