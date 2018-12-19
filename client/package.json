@@ -4,11 +4,15 @@
   "private": true,
   "dependencies": {
     "beautify": "0.0.8",
+    "file-loader": "^2.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.84.0"
+    "semantic-ui-react": "^0.84.0",
+    "url-loader": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,5 +28,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://localhost:5000"
 }
