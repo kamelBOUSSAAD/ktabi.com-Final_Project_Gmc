@@ -6,14 +6,14 @@ import '../home/home.css'
 
 const Home=()=>{
     return(
-    <div className="homeContainer">
-     <div className="search">
+    <div className="row homeContainer">
+     <div className="col-lg-4 col-md-4  ">
       <Search/>
      </div> 
-     <div className="Books">
+     <div className="col-lg-4 col-md-4 ">
      <BodyHome/>
      </div>
-     <div className="topUsers">
+     <div className="col-lg-4 col-md-4 ">
      <TopUsers/>
      </div>
      </div> 

@@ -5,7 +5,7 @@ class Search extends React.Component{
     render(){
         return(
             <div className="searchContainer">
-            <div>
+            <div style={{"margin-top":"50px"}}>
            <input  className="searchBar" placeholder='Search...'></input> 
             </div>
             <div className="searchOptions">
