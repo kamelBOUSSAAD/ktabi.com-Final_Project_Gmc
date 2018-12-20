@@ -10,51 +10,52 @@ class Search extends React.Component{
             </div>
             <div className="searchOptions">
             <div >
-             <select className="selectStyle">
-             <option value="Aventure"></option>
-             <option value="Bande dessiné"></option>
-             <option value="Classique"></option>
-             <option value="Comédie"></option>
-             <option value="Développement paersonnel"></option>
-             <option value="Documentaire"></option>
-             <option value="Géographie"></option>
-             <option value="Histoire"></option>
-             <option value="Livre de cuisine"></option>
+            <select className="selectStyle">
+             <option value="Category" selected>Category</option>  
+             <option value="Aventure">Aventure</option>
+             <option value="Bande dessiné">Bande dessiné</option>
+             <option value="Classique">Classique</option>
+             <option value="Comédie">Comédie</option>
+             <option value="Développement paersonnel">Développement paersonnel</option>
+             <option value="Documentaire">Documentaire</option>
+             <option value="Géographie">Géographie</option>
+             <option value="Histoire">Histoire</option>
+             <option value="Livre de cuisine">Livre de cuisine</option>
              </select>
              </div>
              <div >
              <select className="selectStyle">
-             <option value="city"></option>
-             <option value="Ariana"></option>
-             <option value="Béja"></option>
-             <option value="Ben Arous"></option>
-             <option value="Bizerte"></option>
-             <option value="Gabes"></option>
-             <option value="Gafsa"></option>
-             <option value="Jendouba"></option>
-             <option value="Kairouan"></option>
-             <option value="Kasserine"></option>
-             <option value="Kébili"></option>
-             <option value="Kef"></option>
-             <option value="Mahdia"></option>
-             <option value="Manouba"></option>
-             <option value="Médenine"></option>
-             <option value="Mounastir"></option>
-            <option value="Nabeul"></option>
-            <option value="Sfax"></option>
-            <option value="Sidi Bouzid"></option>
-            <option value="Siliana"></option>
-            <option value="Sousse"></option>
-            <option value="Tataouine"></option>
-            <option value="Touzeur"></option>
-            <option value="Tunis"> </option>
-            <option value="Zaghouan"></option>
+             <option value="City" selected>City</option>
+             <option value="Ariana">Ariana</option>
+             <option value="Béja">Béja</option>
+             <option value="Ben Arous">Ben Arous</option>
+             <option value="Bizerte">Bizerte</option>
+             <option value="Gabes">Gabes</option>
+             <option value="Gafsa">Gafsa</option>
+             <option value="Jendouba">Jendouba</option>
+             <option value="Kairouan">Kairouan</option>
+             <option value="Kasserine">Kasserine</option>
+             <option value="Kébili">Kébili</option>
+             <option value="Kef">Kef</option>
+             <option value="Mahdia">Mahdia</option>
+             <option value="Manouba">Manouba</option>
+             <option value="Médenine">Médenine</option>
+             <option value="Mounastir">Mounastir</option>
+            <option value="Nabeul">Nabeul</option>
+            <option value="Sfax">Sfax</option>
+            <option value="Sidi Bouzid">Sidi Bouzid</option>
+            <option value="Siliana">Siliana</option>
+            <option value="Sousse">Sousse</option>
+            <option value="Tataouine">Tataouine</option>
+            <option value="Touzeur">Touzeur</option>
+            <option value="Tunis">Tunis</option>
+            <option value="Zaghouan">Zaghouan</option>
              </select>
              </div>
              <div>
              <select className="selectStyle">
-                 <option value="Echange"></option>
-                 <option value="Gratuit"></option>
+                 <option value="Echange">Echange</option>
+                 <option value="Gratuit">Gratuit</option>
              </select>
              </div>
             </div>
