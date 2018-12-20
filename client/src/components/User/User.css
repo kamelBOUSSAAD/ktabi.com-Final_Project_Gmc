@@ -1,3 +1,4 @@
+
 body
 {
 height:1000px;
@@ -54,8 +55,7 @@ margin: auto;
 .Listbooks
 {
     display:flex;
-    flex-flow: wrap;
-    
+    flex-flow: wrap; 
 }
 .deleteButton
 {
@@ -66,4 +66,9 @@ margin: auto;
 {
    margin-left:inherit;
    width:90px;
+}
+.bookStyle
+{
+    margin-right:-15px;
+    margin-left:-15px;
 }

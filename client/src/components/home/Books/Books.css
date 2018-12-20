@@ -19,3 +19,7 @@ flex-wrap: wrap;
 }
 .Books{display:flex}
 .books-container{display:flex;flex-direction: column}
+.image-TitleBook
+{
+    display:flex;
+}
