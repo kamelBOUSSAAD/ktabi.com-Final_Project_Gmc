@@ -1,0 +1,62 @@
+.title {
+    color: white
+}
+.Header-Container
+{
+    width:100%;
+    display:flex;
+    background: rgb(247, 100, 3);
+    align-items: center;
+    height: 35px;
+    
+}
+.header
+{
+    display:flex;
+    width:100%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo
+{
+    width:90px;
+    height:25px;
+    margin-top:10px;
+    margin-left:30px;
+    margin-bottom: 10px
+}
+.loginContainer
+{
+display:flex;
+margin : 4px;
+padding: 4px;
+margin-right: 20px
+}
+.login 
+{
+    margin-right:10px;
+    
+}
+.button-login{
+    vertical-align:middle;
+    font-size : 12px;
+    width: 80px;
+    background-color: rgb(247, 100, 3);
+    color: white;
+    border: 1px solid white
+    
+}
+.button-signup{
+    vertical-align:middle;
+    font-size : 12px;
+    width: 80px;
+    background-color: rgb(247, 100, 3);
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    text-align: center;
+
+}
+
+
+

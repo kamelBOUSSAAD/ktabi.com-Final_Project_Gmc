@@ -10,8 +10,8 @@ const BodyHome=()=>{
       <div><User/></div>
           <div>
           <select className="selectStyle">
-              <option value="Livres Recents"></option>
-              <option value="Top Livres"></option>
+              <option value="Livres Recents">Livres Recents</option>
+              <option value="Top Livres">Top Livres</option>
           </select>
           </div>
       </div>
