@@ -5,7 +5,7 @@ import '../bodyHome/bodyHome.css'
 
 const BodyHome=()=>{
     return(
-    <div className="BooksContainer">
+    <div className="">
       <div className="BooksHeader">
       <div><User/></div>
           <div>
