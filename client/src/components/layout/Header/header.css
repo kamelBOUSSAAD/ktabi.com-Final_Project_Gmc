@@ -7,7 +7,7 @@
     display:flex;
     background: rgb(247, 100, 3);
     align-items: center;
-    height: 35px;
+    height: 50px;
     
 }
 .header
@@ -20,8 +20,8 @@
 }
 .logo
 {
-    width:90px;
-    height:25px;
+    width:120px;
+    height:35px;
     margin-top:10px;
     margin-left:30px;
     margin-bottom: 10px
@@ -40,8 +40,8 @@ margin-right: 20px
 }
 .button-login{
     vertical-align:middle;
-    font-size : 12px;
-    width: 80px;
+    font-size : 18px;
+    width: 90px;
     background-color: rgb(247, 100, 3);
     color: white;
     border: 1px solid white
@@ -49,8 +49,8 @@ margin-right: 20px
 }
 .button-signup{
     vertical-align:middle;
-    font-size : 12px;
-    width: 80px;
+    font-size : 18px;
+    width: 90px;
     background-color: rgb(247, 100, 3);
     color: rgb(255, 255, 255);
     border: 1px solid white;
