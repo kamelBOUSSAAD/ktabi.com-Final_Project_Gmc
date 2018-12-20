@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../User/User.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Book from '../home/book/book'
 import User from '../home/user/user'
 
@@ -9,15 +10,17 @@ const UserProfile=()=>{
       <div>
         <div className="container">
         <div className="booksBlock">
-        <div className="Listbooks">
-        <ul>
-          <li><Link to=""><Book/></Link></li>
-          <Book/>
-          <Book/>
-          <Book/>
-          <Book/>
-          <Book/>
-        </ul> 
+         <div className="row ">
+          <div className="col"><Link to=""><Book className="bookStyle"/></Link></div>
+          <div className="col"><Link to=""><Book className="bookStyle"/></Link></div>
+          <div className="col"><Link to=""><Book className="bookStyle"/></Link></div>
+          <div className="col"><Link to=""><Book className="bookStyle"/></Link></div>
+          </div>
+          <div className="row ">
+          <div className="col"><Link to=""><Book className="bookStyle"/></Link></div>
+          <div className="col"><Link to=""><Book className="bookStyle"/></Link></div>
+          <div className="col"><Link to=""><Book className="bookStyle"/></Link></div>
+          <div className="col"><Link to=""><Book className="bookStyle"/></Link></div>
           </div>
           
         </div>

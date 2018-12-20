@@ -1,6 +1,6 @@
 import React from 'react'
 import User from '../home/user/user.js'
-import Book from '../home/book/book.js'
+import Book from '../home/bookHome/bookHome.js'
 import '../bodyHome/bodyHome.css'
 
 const BodyHome=()=>{
@@ -16,7 +16,6 @@ const BodyHome=()=>{
           </div>
       </div>
       <div className="BooksContent">
-      <Book/>
       <Book/>
       <Book/>
       <Book/>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Book from '../client/components/home/book/book.js';
+import Book from '../client/components/home/bookHome/bookHome.js';
 
 
 const Books=()=>{

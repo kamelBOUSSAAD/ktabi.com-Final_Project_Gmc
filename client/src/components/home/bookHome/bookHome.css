@@ -1,0 +1,30 @@
+.book-image
+{
+ height:132px;
+ max-width:150px;
+}
+
+.Description-Book
+{
+   display:flex; 
+}
+.image-TitleBook
+{
+    display:flex;
+    flex-direction: column
+}
+.Container-bookHome
+{
+    display:flex;
+    flex-direction: row;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    background-color: #fff;
+    margin-bottom:15px;
+    margin: 0 auto;
+   
+}
+.container-description
+{
+    display:flex;
+    flex-direction: column;
+}
