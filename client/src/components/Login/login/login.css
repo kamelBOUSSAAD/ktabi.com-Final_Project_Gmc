@@ -7,14 +7,7 @@
     padding: 20px;
     margin-top:30px;
     border: 1px solid rgb(43, 42, 42) ;
-<<<<<<< HEAD
-   
-
-
   }
-=======
-   }
->>>>>>> eb64daeb731d2ae9fe97890e6eacf33bc4165dc6
 
   .login-title{
  font-size: 12px;
@@ -39,20 +32,12 @@
     color: white;
     border: 1px solid white
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> eb64daeb731d2ae9fe97890e6eacf33bc4165dc6
     .input-style{
         width: 100%;
         padding: 3px;
         margin-bottom: 10px;
         height: 20px;
         box-sizing: border-box;
-<<<<<<< HEAD
         font-size: 10px;
-=======
-        font-size: 14px;
->>>>>>> eb64daeb731d2ae9fe97890e6eacf33bc4165dc6
     
     }

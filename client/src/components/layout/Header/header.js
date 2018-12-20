@@ -16,11 +16,7 @@ class Header extends React.Component{
               <Link to='/login'> <button className="button-login" type="button">login</button></Link> 
               </div>
               <div className="sign up">
-<<<<<<< HEAD
               <button className="button-signup" type="button">Sign up</button>
-=======
-              <Link to='/signup'><button className="button-signup" type="button">Sign up</button></Link>
->>>>>>> eb64daeb731d2ae9fe97890e6eacf33bc4165dc6
               </div>
             </div>
        </div>

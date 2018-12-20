@@ -11,10 +11,7 @@ const Login = () => {
 
                     <div className = "email-block">
                     <div className="login-title">Email </div>
-<<<<<<< HEAD
                    
-=======
->>>>>>> eb64daeb731d2ae9fe97890e6eacf33bc4165dc6
                     </div>
                     <input className="input-style" type="text" ></input>
 
