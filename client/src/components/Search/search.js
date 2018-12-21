@@ -16,7 +16,7 @@ class Search extends React.Component{
              <option value="Bande dessiné">Bande dessiné</option>
              <option value="Classique">Classique</option>
              <option value="Comédie">Comédie</option>
-             <option value="Développement paersonnel">Développement paersonnel</option>
+             <option value="Développement personnel">Développement paersonnel</option>
              <option value="Documentaire">Documentaire</option>
              <option value="Géographie">Géographie</option>
              <option value="Histoire">Histoire</option>

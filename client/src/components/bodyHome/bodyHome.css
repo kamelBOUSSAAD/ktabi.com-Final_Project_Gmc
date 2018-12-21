@@ -1,12 +1,15 @@
 .selectStyle
 {
-    width:120px;
+    width: 138px;
+    height: 25px;
 }
 .BooksHeader
 {
     display:flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
     
 }
 .BooksContainer

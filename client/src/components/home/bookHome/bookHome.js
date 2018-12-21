@@ -19,7 +19,7 @@ const Book=()=>{
             <div className="col-lg-6 image-TitleBook">
              <img src="https://images.gr-assets.com/books/1474171184l/136251.jpg" 
             alt="harryPotter" className="book-image"/> 
-            <div><h2 style={{"text-align":"center"}}>Titre</h2></div>
+            <div><h2>Harry Potter et le Prince de sang-mêlé </h2></div>
             </div>
 
 
