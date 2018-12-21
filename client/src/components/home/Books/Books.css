@@ -18,8 +18,8 @@ flex-wrap: wrap;
     margin-right:12px;
 }
 .Books{display:flex}
-.books-container{display:flex;flex-direction: column}
-.image-TitleBook
+.books-container
 {
-    display:flex;
+    display:flex;flex-direction: column;
+    background-color: #f8f9fa
 }

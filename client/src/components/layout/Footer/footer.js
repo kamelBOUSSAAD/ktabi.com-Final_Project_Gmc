@@ -4,7 +4,6 @@ import logo from '../../../images/logo.png';
 import logogmy from '../../../images/logogCMG.png';
 
 
-
 class Footer extends React.Component{
     render(){
         return(
@@ -34,3 +33,4 @@ class Footer extends React.Component{
 }
 
 export default Footer;
+

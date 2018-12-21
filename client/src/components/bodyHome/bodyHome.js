@@ -1,13 +1,13 @@
 import React from 'react'
-import User from '../home/user/user.js'
+// import User from '../home/user/user.js'
 import Book from '../home/bookHome/bookHome.js'
 import '../bodyHome/bodyHome.css'
 
 const BodyHome=()=>{
     return(
-    <div className="BooksContainer">
+    <div className="">
       <div className="BooksHeader">
-      <div><User/></div>
+      {/* <div><User/></div> */}
           <div>
           <select className="selectStyle">
               <option value="Livres Recents">Livres Recents</option>

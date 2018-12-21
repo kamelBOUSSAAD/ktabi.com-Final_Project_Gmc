@@ -1,0 +1,30 @@
+.Header-Container
+{
+    width:100%;
+    background-color:#f8f8f8;
+    display:flex;
+    justify-content: space-between;   
+}
+.header
+{
+    display:flex;
+    justify-content: space-between;
+    margin-left:70px;
+    width:80%;
+}
+.header img
+{
+    width:100px;
+    height:55px;
+}
+.loginContainer
+{
+display:flex;
+margin-top:15px;
+margin-left:50px;
+}
+.login 
+{
+    margin-right:10px;
+}
+

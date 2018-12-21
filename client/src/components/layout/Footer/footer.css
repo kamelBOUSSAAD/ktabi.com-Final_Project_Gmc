@@ -64,3 +64,16 @@ width: 450px;
    font-size: 35px;
    color: rgb(247, 100, 3);
 }
+.footer-container
+{   
+    height:120px;
+    width:100%;
+    background-color:#f8f8f8;
+}
+.footer-disposition
+{
+    display:flex;
+    justify-content: space-around;
+}
+.paragraph{
+    text-align: center}

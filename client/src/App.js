@@ -21,7 +21,6 @@ class App extends Component {
        <Route exact path="/" render={ ()=><Home/>}/>
        <Route exact path="/login" render={ ()=><Login/>}/>
        </div>
-
        <Footer/>
        </div>   
       </BrowserRouter>
