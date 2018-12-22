@@ -1,16 +1,14 @@
 .login-form { 
-    width:30%;
-    margin: 30px;
-    margin-left: 350px;
-    padding: 10px;
-    margin-bottom: 600px;
-  
+ 
+ 
   }
 
 
   .form { 
-   
-   
+    display: block;
+    border-width: 1px;
+    width: 35%;
+    MARGIN-left: 350px;
   }
 
   .login-title{
