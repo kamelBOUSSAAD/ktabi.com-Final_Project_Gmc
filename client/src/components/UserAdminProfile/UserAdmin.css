@@ -1,0 +1,12 @@
+.card
+{
+    width: 300px;
+    height: 350px;
+    float: right;
+    
+}
+.container
+{
+margin-top:60px;
+margin-bottom:60px;
+}
