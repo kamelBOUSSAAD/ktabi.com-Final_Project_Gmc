@@ -1,33 +1,114 @@
-import React from 'react'
+import React, { Component } from 'react';
 import '../login/login.css'
 import '../../../App.css'
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { loginUser } from '../../../actions/authActions';
+import TextFieldGroup from '../../common/TextFieldGroup';
 
-const Login = () => {
+class Login extends Component {
+    constructor() {
+      super();
+      this.state = {
+        email: '',
+        password: '',
+        errors: {}
+      };
+  
+      this.onChange = this.onChange.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+    }
+  
+    componentDidMount() {
+      if (this.props.auth.isAuthenticated) {
+        this.props.history.push('/');
+      }
+    }
+  
+    componentWillReceiveProps(nextProps) {
+      if (nextProps.auth.isAuthenticated) {
+        this.props.history.push('/');
+      }
+  
+      if (nextProps.errors) {
+        this.setState({ errors: nextProps.errors });
+      }
+    }
+  
+    onSubmit(e) {
+      e.preventDefault();
+  
+      const userData = {
+        email: this.state.email,
+        password: this.state.password
+      };
+  
+      this.props.loginUser(userData);
+    }
+  
+    onChange(e) {
+      this.setState({ [e.target.name]: e.target.value });
+    }
+  
+    render() {
+      const { errors } = this.state;
+
     return (
         <div>
            
-            <div className="login-form">
-                <from className="form">
+          <div className="login-form">
+            <form onSubmit={this.onSubmit}>
+                 <div className = "email-block">
+                   <div><h1>Se connecter à Ktabi</h1></div>
+                  
+                    <TextFieldGroup
+                  placeholder="Email Address"
+                  name="email"
+                  type="email"
+                  value={this.state.email}
+                  onChange={this.onChange}
+                  error={errors.email}
+                />
 
-                    <div className = "email-block">
-                    <div className="login-title">Email </div>
+
+                  </div>
                    
-                    </div>
-                    <input className="input-style" type="text" ></input>
-
-                    <div className = "password-block">
-                    <div className="login-title">Mot de passe </div>
-                    </div>
-                    <input className="input-style" type="password"></input>
+                   <div className = "password-block">
+                 
+                    
+                <TextFieldGroup
+                  placeholder="Password"
+                  name="password"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.onChange}
+                  error={errors.password}
+                />
+                   
+                
+                     </div>
                     <button className="button-connexion" type="submit">Connexion</button>
                     <div className="oublie"> Inscrivez vous </div>
                     <div className="oublie"> Mot de passe oublié?</div>
-                </from>
+            
+                </form>
+               
 
             </div>
         </div>
 
     )
-}
+}}
 
-export default Login;
+Login.propTypes = {
+    loginUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+  
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  
+  export default connect(mapStateToProps, { loginUser })(Login);

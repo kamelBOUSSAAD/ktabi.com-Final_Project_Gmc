@@ -1,22 +1,14 @@
 .login-form { 
-    width: 100%;
-    display: flex;
-    justify-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 600px;
-    border: 1px solid rgb(43, 42, 42) ;
-   
+    width:30%;
+    margin: 30px;
+    margin-left: 350px;
+    padding: 10px;
+    margin-bottom: 600px;
+  
   }
 
 
   .form { 
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    padding: 20px;
    
    
   }
@@ -46,11 +38,10 @@
     border: 1px solid white
     }
     .input-style{
-        width: 100%;
-        padding: 3px;
-        margin-bottom: 10px;
-        height: 40px;
-        box-sizing: border-box;
-        font-size: 20px;
-    
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 5px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 14px;
     }
