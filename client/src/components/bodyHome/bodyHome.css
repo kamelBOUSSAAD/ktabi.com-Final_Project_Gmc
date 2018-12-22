@@ -23,6 +23,14 @@
 .BooksContent
 {
     display:flex;
-    flex-direction: column;
-    
+    justify-content:space-between;
+    flex-flow: wrap;    
+}
+.nav
+{
+    font-size: 14px;
+}
+.pagination
+{
+    margin-left:154px;
 }

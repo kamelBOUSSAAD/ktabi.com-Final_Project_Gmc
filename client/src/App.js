@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer/footer.js';
 import Header from './components/layout/Header/header.js';
 import Home from './components/home/home.js'
 import Login from './components/Login/login/login'
+import UserAdmin from './components/UserAdminProfile/UserAdmin'
 import './App.css'
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
        <div>
        <Route exact path="/" render={ ()=><Home/>}/>
        <Route exact path="/login" render={ ()=><Login/>}/>
+       <Route exact path="/admin-profil" render={UserAdmin}/>
        </div>
        <Footer/>
        </div>   

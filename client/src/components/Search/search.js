@@ -5,11 +5,14 @@ class Search extends React.Component{
     render(){
         return(
             <div className="searchContainer">
-            <div style={{"margin-top":"50px"}}>
-           <input  className="searchBar" placeholder='Search...'></input> 
+            <div className="searchbarStyle" style={{"margin-top":"50px"}}>
+            <form>
+           <input  className="searchBar" placeholder='Search...'></input>
+           <button type="submit"><i class="fa fa-search"></i></button>
+           </form>
             </div>
             <div className="searchOptions">
-            <div >
+            <div>
             <select className="selectStyle">
              <option value="Category" selected>Category</option>  
              <option value="Aventure">Aventure</option>
