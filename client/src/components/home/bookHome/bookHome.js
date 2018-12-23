@@ -47,7 +47,7 @@ const Book=()=>{
                  <i className="far fa-star"></i>
                   </div>
                  <Link to=""><img src="https://images.gr-assets.com/books/1474171184l/136251.jpg" alt=""/></Link>
-<div className="">
+<div className="bookDescription">
 <p>The sun disappeared behind the horizon today. Experts claim it could be gone for good!</p>
 </div>
 <Link to="/"><button>je le veux</button></Link>

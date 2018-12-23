@@ -40,8 +40,12 @@
     height:100%;
     
 }
-p
+.bookDescription p
 {
     color:black;
     font-size:12px
+}
+.card-body img
+{
+width:100px;
 }

@@ -14,6 +14,7 @@ import Home from './components/home/home.js'
 import Login from './components/Login/login/login'
 import Signup from './components/Login/signup/signup'
 import UserAdmin from './components/UserAdminProfile/UserAdmin'
+import User from './components/home/user/user'
 import './App.css'
 
 
@@ -56,6 +57,7 @@ class App extends Component {
        <Route exact path="/login" render={ ()=><Login/>}/>
        <Route exact path="/signup" render={ ()=><Signup/>}/>
        <Route exact path="/admin-profil" render={UserAdmin}/>
+       <Route exact path="/user" render={User}/>
        </div>
        <Footer/>
        </div>   
