@@ -7,13 +7,13 @@ import '../home/home.css'
 const Home=()=>{
     return(
     <div className="row homeContainer">
-     <div className="col-lg-3 col-md-3  ">
+     <div className="col-lg-3 col-md-3 col-sm-12">
       <Search/>
      </div> 
-     <div className="col-lg-6 col-md-6 ">
+     <div className="col-lg-6 col-md-6 col-sm-12">
      <BodyHome/>
      </div>
-     <div className="col-lg-3 col-md-3 ">
+     <div className="col-lg-3 col-md-3 col-sm-12">
      <TopUsers/>
      </div>
      </div> 

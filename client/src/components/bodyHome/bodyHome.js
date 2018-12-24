@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-// import User from '../home/user/user.js'
 import Book from '../home/bookHome/bookHome.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import '../bodyHome/bodyHome.css'

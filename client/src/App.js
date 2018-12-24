@@ -18,10 +18,11 @@ import Login from './components/Login/login/login'
 import Signup from './components/Login/signup/signup'
 // import UserAdmin from './components/UserAdminProfile/UserAdmin'
 import UserRouter from './components/User/index'
+// import UserAdmin from './components/UserAdminProfile/UserAdmin'
+// import User from './components/home/user/user'
+// import UserProfil from './components/UserProfile/UserProfile'
+// import EditProfile from './components/UserProfile/editerProfil'
 import './App.css'
-
-
-
 
 // Check for token
 if (localStorage.jwtToken) {
@@ -71,7 +72,7 @@ class App extends Component {
               </Switch>
 
        </div>
-       <Footer/>
+       <Footer/> 
        </div>   
       </BrowserRouter>
       </Provider>
