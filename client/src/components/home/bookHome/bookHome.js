@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import bookImage from '../../../images/harryPotter.jpg'
 import '../bookHome/bookHome.css'
 
 
@@ -45,8 +46,8 @@ const Book=()=>{
                  <i className="far fa-star"></i>
                  <i className="far fa-star"></i>
                  <i className="far fa-star"></i>
-                  </div>
-                 <Link to=""><img src="https://images.gr-assets.com/books/1474171184l/136251.jpg" alt=""/></Link>
+</div>
+    <Link to=""><img src={bookImage} alt=""/></Link>
 <div className="bookDescription">
 <p>The sun disappeared behind the horizon today. Experts claim it could be gone for good!</p>
 </div>

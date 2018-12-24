@@ -9,7 +9,6 @@ class Footer extends React.Component{
         return(
 <div>
         <div className="footer">
-          {/* block logos */}
           <div className="logos" >
           <img className="logo-footer-ktabi" src={logo} alt="logo"/>
           <img className="logo-footer-gmc" src={logogmy} alt="logoGMC"/>

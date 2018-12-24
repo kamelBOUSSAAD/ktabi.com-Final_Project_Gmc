@@ -15,10 +15,9 @@ import Login from './components/Login/login/login'
 import Signup from './components/Login/signup/signup'
 import UserAdmin from './components/UserAdminProfile/UserAdmin'
 import User from './components/home/user/user'
+import UserProfil from './components/UserProfile/UserProfile'
+import EditProfile from './components/UserProfile/editerProfil'
 import './App.css'
-
-
-
 
 // Check for token
 if (localStorage.jwtToken) {
@@ -58,8 +57,11 @@ class App extends Component {
        <Route exact path="/signup" render={ ()=><Signup/>}/>
        <Route exact path="/admin-profil" render={UserAdmin}/>
        <Route exact path="/user" render={User}/>
+       <Route exact path="/user-profil" render={UserProfil}/>
+       <Route exact path="/editer-profil" render={EditProfile}/>
+       
        </div>
-       <Footer/>
+       {/* <Footer/>  */}
        </div>   
       </BrowserRouter>
       </Provider>
