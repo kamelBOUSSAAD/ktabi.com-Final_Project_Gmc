@@ -1,0 +1,28 @@
+.data-form{
+ height: 800px;
+display: block;
+width:40%;
+padding-top: 10px;
+
+
+}
+.edit{
+    border: 1px solid rgb(43, 42, 42);
+    display: block;
+
+    
+    padding-left: 10%;
+    padding-top: 10px;
+ 
+}
+
+.button-enregistrer{
+    vertical-align:middle;
+    font-size : 12px;
+    width:100%;
+    height: 40px;
+    margin-top: 9px;
+    background-color: rgb(247, 100, 3);
+    color: white;
+    border: 1px solid white
+    }

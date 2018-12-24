@@ -1,74 +1,45 @@
-
-body
-{
-height:1000px;
-}
-.container 
-{
-    display:flex;
-    justify-content: space-between;
-}
-.userProfileContainer
-{
-    width:20%;
-    height:300px;
-    border: 1px solid rgba(0,0,0,0.4);
-    border-top-color:rgb(247, 100, 3);
-    border-radius: 8px;
-    border-top: 3px solid rgb(247, 100, 3);
-    border-right: 1px solid #ececec;
-    border-left: 1px solid #ececec;
-    border-bottom: 1px solid #dfdfdf;
-    border-top-width: 4px;
-     float: right; 
-    margin-right:50px;
-    margin-top:50px;
-}
- .userinfo
- {
-width: 150px;
-margin: auto; 
-}
-
-.h3
-{margin-right:34px;
-
-}
-.booksBlock
-{
-    border:1px solid black;
-    border-top-color:rgb(247, 100, 3);
-    border-radius: 8px;
-    border-top: 3px solid rgb(247, 100, 3);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.04);
-    border-right: 1px solid #ececec;
-    border-left: 1px solid #ececec;
-    border-bottom: 1px solid #dfdfdf;
-    width:55%;
-    height:320px;
-    float:left; 
-    margin-top:50px;
-    margin-left:35px;
+.data-container{
    
-     
+    width : 80%;
+    display: flex;
+    flex-direction: row;
+   
+    
 }
-.Listbooks
-{
-    display:flex;
-    flex-flow: wrap; 
+.user-data{
+padding-top: 20px;
+width: 90%;
+padding-left: 5%;
+
 }
-.deleteButton
-{
-    margin-left:35px; 
-    width:160px; 
+.data{
+display: flex;
+flex-direction: column;
+padding-left: 10px;
+font-size: 12px;
+text-align: left;
+
 }
-.disconnectButton
-{
-   margin-left:inherit;
-   width:90px;
+
+.title{
+margin-top: 30px;
 }
-.bookStyle
-{
-    margin-right:-15px;
-    margin-left:-15px;
+
+.profile{
+    
 }
+
+.menu{
+    margin-top: 20px;
+}
+
+.button-menu{
+    vertical-align:middle;
+    font-size : 12px;
+    width:20%;
+    height: 40px;
+    margin-top: 9px;
+    background-color: rgb(247, 100, 3);
+    color: white;
+    border: 1px solid white
+    }

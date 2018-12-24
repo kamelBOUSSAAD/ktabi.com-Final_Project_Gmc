@@ -52,6 +52,18 @@
     text-align: center;
     
 }
+
+.button-logout{
+    vertical-align:middle;
+    font-size : 14px;
+    padding : 5px;
+    width: 100px;
+    color:rgb(247, 100, 3);
+    text-align: center;
+    text-decoration: none;
+    background-color: #333;
+    border: 1px solid rgb(247, 100, 3);
+}
 .button-signup{
     vertical-align:middle;
     font-size : 14px;
@@ -75,8 +87,7 @@ ul {
   
   li {
     float: left;
- 
-   
+    padding: 10px;
   }
   
   li a {

@@ -10,7 +10,6 @@ import { logoutUser } from '../../../actions/authActions';
 
  
 
-
 class Header extends Component{
     onLogoutClick(e) {
         e.preventDefault();
@@ -25,21 +24,32 @@ class Header extends Component{
         
 
             <ul className="">
-              <li className="">
+          <li className="">
               <a
-            href="/"
-            onClick={this.onLogoutClick.bind(this)}
-            className=""
+            href="/profile"
+           className=""
               >
             <img
               className="user-img"
               src={user.avatar}
               alt={user.name}
               style={{  }}
-              title="You must have a Gravatar connected to your email to display an image"
+              title=""
             />{' '}
-            Déconnexion
+           {user.name}
           </a>
+        </li>
+
+
+
+              <li >
+            <button className="button-logout"
+            href="/"
+            onClick={this.onLogoutClick.bind(this)}
+           
+              >
+            Déconnexion
+          </button>
         </li>
             </ul>
             
@@ -75,12 +85,7 @@ class Header extends Component{
 
         <ul className="loginContainer">
 
-        <li className="">
-                <Link className="" to="/profiles">
-                  {' '}
-                  Developers
-                </Link>
-          </li>
+        
         </ul>
         {isAuthenticated ? authLinks : guestLinks}
         </div>

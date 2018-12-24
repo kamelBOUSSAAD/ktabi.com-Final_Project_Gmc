@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import { registerUser } from '../../../actions/authActions';
-
+import TextFieldGroup from '../../common/TextFieldGroup';
 
 class Register extends Component {
     constructor() {
@@ -22,7 +22,7 @@ class Register extends Component {
     }
     componentDidMount() {
         if (this.props.auth.isAuthenticated) {
-          this.props.history.push('/dashboard');
+          this.props.history.push('/profile');
         }
       }
     
@@ -58,56 +58,49 @@ class Register extends Component {
         return (
 
         <div className="formContainer">
-       
+
+
         <form noValidate className="formStyle" onSubmit={this.onSubmit}>
                    <h1  className="title"> Créer votre profil </h1>
-                    <div className = "">
-                    <div className="signup-title">Nom * </div>
-                    </div>
-                    <input className="input-style" type="text"
-                     placeholder="Name"
-                     name="name"
-                     value={this.state.name}
-                     onChange={this.onChange}
-          
-                    />
-                     
-                    <span className="error-m"> {errors.name}</span>
-                     
-
-                    <div className = "">
-                    <div className="signup-title">Email *</div>
-                    </div>
-                    <input className="input-style" type="text" 
-                    
-                    placeholder="Email Address"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.onChange}
-
-                    />
-                  <span className="error-m"> {errors.email}</span>
-                    <div className = "">
-                    <div className="signup-title">Mot de passe  *</div>
-                    </div>
-                    <input className="input-style" type="password"
-                     placeholder="Password"
-                     name="password"
-                     value={this.state.password}
-                     onChange={this.onChange}
-                    />
-                  <span className="error-m"> {errors.password}</span>
-                    <div className = "">
-                    <div className="signup-title">Confirmer le mot de passe *</div>
-                    </div>
-                    <input className="input-style" type="password"
-                     placeholder="Confirm Password"
-                     name="password2"
-                     value={this.state.password2}
-                     onChange={this.onChange}
-                    />
-                     <span className="error-m"> {errors.password2}</span>
-                
+                  
+                  
+               <TextFieldGroup
+                  placeholder="Name"
+                  name="name"
+                  value={this.state.name}
+                  onChange={this.onChange}
+                  error={errors.name}
+                />
+                <TextFieldGroup
+                  placeholder="Email"
+                  name="email"
+                  type="email"
+                  value={this.state.email}
+                  onChange={this.onChange}
+                  error={errors.email}
+                  info="This site uses Gravatar so if you want a profile image, use a Gravatar email"
+                />
+                <TextFieldGroup
+                  placeholder="Password"
+                  name="password"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.onChange}
+                  error={errors.password}
+                />
+                <TextFieldGroup
+                  placeholder="Confirm Password"
+                  name="password2"
+                  type="password"
+                  value={this.state.password2}
+                  onChange={this.onChange}
+                  error={errors.password2}
+                />
+                  
+                  
+                  
+                  
+                  
 
                    
         <div className="submit">
@@ -115,7 +108,7 @@ class Register extends Component {
        
         </div>
         </form>        
-         </div>
+         </div> 
       )
      }
  }

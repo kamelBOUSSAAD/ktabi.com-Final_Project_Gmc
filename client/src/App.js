@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route,Switch} from 'react-router-dom';
+// import Dashboard from './components/Dashboard';
+// import CreateProfile from './components/CreateProfile';
 
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './actions/authActions';
-
+import Landing from './components/layout/Landing';
+import PrivateRoute from './components/common/PrivateRoute';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -13,7 +16,8 @@ import Header from './components/layout/Header/header.js';
 import Home from './components/home/home.js'
 import Login from './components/Login/login/login'
 import Signup from './components/Login/signup/signup'
-import UserAdmin from './components/UserAdminProfile/UserAdmin'
+// import UserAdmin from './components/UserAdminProfile/UserAdmin'
+import UserRouter from './components/User/index'
 import './App.css'
 
 
@@ -50,12 +54,22 @@ class App extends Component {
 
       <div className="App">
        <Header/>
-       
+       <Route exact path="/" component={Landing} />
        <div>
-       <Route exact path="/" render={ ()=><Home/>}/>
-       <Route exact path="/login" render={ ()=><Login/>}/>
-       <Route exact path="/signup" render={ ()=><Signup/>}/>
-       <Route exact path="/admin-profil" render={UserAdmin}/>
+       <Route exact path="/" component={Home}/>
+       <Route exact path="/login" component={Login}/>
+       <Route exact path="/signup" component={Signup}/>
+       <Switch>
+        <PrivateRoute exact path="/profile" component={UserRouter} />
+        </Switch>
+            <Switch>
+              <PrivateRoute
+                  exact
+                  path="/"
+                  component={Home}
+                />
+              </Switch>
+
        </div>
        <Footer/>
        </div>   
