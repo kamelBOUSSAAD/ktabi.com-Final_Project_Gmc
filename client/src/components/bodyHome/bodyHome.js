@@ -23,12 +23,13 @@ const BodyHome=()=>{
           </div>
       </div>
       <div className="BooksContent">
-      <div><Book/></div>
-      <div><Book/></div>
-      <div><Book/></div>
-      <div><Book/></div>
-      <div><Book/></div>
-                 
+      <div className="bookStyle"><Book/></div>
+      <div className="bookStyle"><Book/></div>
+      <div className="bookStyle"><Book/></div>
+      <div className="bookStyle"><Book/></div>
+      <div className="bookStyle"><Book/></div>
+      </div>
+    <div> 
   <ul className="pagination">
     <li><Link to="">1</Link></li>
     <li><Link to="">2</Link></li>
@@ -36,8 +37,9 @@ const BodyHome=()=>{
     <li><Link to="">4</Link></li>
     <li><Link to="">5</Link></li>
   </ul>
+  </div> 
 
-      </div>
+
      </div>
         
     )

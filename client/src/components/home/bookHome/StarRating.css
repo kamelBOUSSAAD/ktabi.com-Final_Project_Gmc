@@ -1,0 +1,21 @@
+
+
+  .stars {
+    display: flex;
+    margin-bottom: 10px;
+  }  
+  .fa-plus:before {
+    font-size: 40px;
+  }
+  .fa {
+    margin-top: 50%;
+  }
+  
+  .fullStar {
+    font-size:22px;
+    color: yellow;
+  }
+  .emptyStar {
+    font-size:22px;
+  }
+  

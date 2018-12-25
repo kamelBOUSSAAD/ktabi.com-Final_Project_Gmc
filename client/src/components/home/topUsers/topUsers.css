@@ -14,3 +14,13 @@
 {
     width:100%;
 }
+
+.topUsers
+{
+    background-color:#ff7a00;
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    text-align:center;
+    color:#ffffff;
+}

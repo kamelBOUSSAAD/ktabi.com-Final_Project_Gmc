@@ -1,5 +1,6 @@
+
 body{
-    width: 90%;
-    padding-left: 10%;
+    width: 100%;
+    box-sizing: border-box;  
 }
 

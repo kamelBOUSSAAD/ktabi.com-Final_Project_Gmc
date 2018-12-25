@@ -25,8 +25,7 @@ class User extends React.Component{
   <article className="col-lg-7 col-md-7 col-sm-7 col-xs-7">
     <h2>john doe</h2>
     <p>
-      <a href="/">johnDoe@hotmail.fr</a>
-      <p>+216 55 200 032</p>
+      <a href="/"><p className="textStyle">Nombre de livres en Bibliothéque:6</p></a>
     </p>
   </article>
 </div>

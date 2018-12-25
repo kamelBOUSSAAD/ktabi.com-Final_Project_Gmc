@@ -63,13 +63,13 @@ class App extends Component {
        <Switch>
         <PrivateRoute exact path="/profile" component={UserRouter} />
         </Switch>
-            <Switch>
+            {/* <Switch>
               <PrivateRoute
                   exact
                   path="/"
                   component={Home}
                 />
-              </Switch>
+              </Switch> */}
 
        </div>
        <Footer/> 
