@@ -43,7 +43,7 @@ router.post(
         if (req.body.operation) bookFields.operation = req.body.operation;
         if (req.body.categorie) bookFields.categorie = req.body.categorie;
     
-        // Save Profile
+        // Save book
          new  Book(bookFields).save().then(book => res.json(book));
                    
      }
@@ -116,7 +116,10 @@ router.put(
         Book.findOneAndUpdate(
           { _id: req.params.id },
           { $set: bookFields }
-        ).then(book => res.json(book));
+        ).then(book => res.json(book)
+        // .catch(err => res.json({error : true}))
+        
+        );
       
 
 

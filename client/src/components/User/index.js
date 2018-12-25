@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, } from "react-router-dom";
 
-import User from "./User";
-import UserData from "./edit profiel/UserData";
-import UserBooks from "./UserBooks";
+import User from "./Profile/User";
+import Edit_Books from "./Edit_profile/Create_Edite_User";
+import User_Books from "./User_Books/Add_Container";
 class UserRouter extends Component {
-  render() {
+  render() {  
     return (
       <BrowserRouter>
         <div className="">
          <User/>
           <div>
          
-          <Route exact path="/edit-profile" render={ ()=><UserData/>}/>
-          <Route exact path="/user-books" render={ ()=><UserBooks/>} />
+          <Route exact path="/edit-profile" render={ ()=><Edit_Books/>}/>
+          <Route exact path="/user-books" render={ ()=><User_Books/>} />
           </div>
         </div>
       </BrowserRouter>

@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getCurrentProfile } from "../../actions/profileActions";
-import Spinner from "../common/Spinner";
+import { getCurrentProfile } from "../../../actions/profileActions";
+import Spinner from "../../common/Spinner";
 import "./User.css";
-import isEmpty from "../../validation/is-empty";
+import isEmpty from "../../../validation/is-empty";
 
 class UserProfile extends Component {
   componentDidMount() {
@@ -37,7 +37,7 @@ class UserProfile extends Component {
           <p> please add some info</p>
           <div className="data-container">
             <div className="img-container">
-              <img src={user.avatar} alt="img-avatar" />
+              <img src={user.avatar} width = '110px' height = '110px' alt="img-avatar" />
             </div>
             <div className="data">
               <h3 className="data">Nom : {user.name}</h3>
