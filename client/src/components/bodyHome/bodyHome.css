@@ -23,8 +23,12 @@
 .BooksContent
 {
     display:flex;
-    justify-content:space-between;
+    /* justify-content:space-between; */
     flex-flow: wrap;    
+}
+.bookStyle
+{
+    margin-left:20px;
 }
 .nav
 {
@@ -32,5 +36,5 @@
 }
 .pagination
 {
-    margin-left:154px;
+   margin-left:30%;
 }

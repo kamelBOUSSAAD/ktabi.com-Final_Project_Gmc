@@ -4,6 +4,7 @@ import './././search.css'
 class Search extends React.Component{
     render(){
         return(
+            <div className="search-header">
             <div className="searchContainer">
             <div className="searchbarStyle" style={{"margin-top":"50px"}}>
             <form>
@@ -61,6 +62,7 @@ class Search extends React.Component{
                  <option value="Gratuit">Gratuit</option>
              </select>
              </div>
+            </div>
             </div>
             </div>
         )

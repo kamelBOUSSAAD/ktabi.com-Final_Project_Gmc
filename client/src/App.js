@@ -55,7 +55,7 @@ class App extends Component {
 
       <div className="App">
        <Header/>
-       <Route exact path="/" component={Landing} />
+       {/* <Route exact path="/" component={Landing} /> */}
        <div>
        <Route exact path="/" component={Home}/>
        <Route exact path="/login" component={Login}/>
@@ -63,13 +63,13 @@ class App extends Component {
        <Switch>
         <PrivateRoute exact path="/profile" component={UserRouter} />
         </Switch>
-            <Switch>
+            {/* <Switch>
               <PrivateRoute
                   exact
                   path="/"
                   component={Home}
                 />
-              </Switch>
+              </Switch> */}
 
        </div>
        <Footer/> 

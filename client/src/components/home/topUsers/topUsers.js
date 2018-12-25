@@ -7,7 +7,7 @@ const TopUsers=()=>{
     return(
         <div className="user-div">
        <div className="users-group">
-       <h2 style={{"text-align":"center"}}>Top Users</h2>
+       <div className="topUsers"><h2>Top Users</h2></div>
         <div><User/></div>
         <div><User/></div>
         <div><User/></div>

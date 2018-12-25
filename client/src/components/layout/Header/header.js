@@ -8,8 +8,6 @@ import { connect } from 'react-redux';
 import { logoutUser } from '../../../actions/authActions';
 
 
- 
-
 class Header extends Component{
     onLogoutClick(e) {
         e.preventDefault();
