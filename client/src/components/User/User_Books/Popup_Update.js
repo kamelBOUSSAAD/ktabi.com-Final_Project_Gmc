@@ -31,6 +31,7 @@ class Popup extends Component {
       this.setState({ errors: this.props.errors });
     }
   }
+  
 
   onSubmit(e) {
     e.preventDefault();
@@ -58,7 +59,7 @@ class Popup extends Component {
           <form className="add-book" onSubmit={this.onSubmit}>
             <h5 className="desc-add-book">
               {" "}
-              Ajouter vous livres pour partager aves les lectures{" "}
+              Ajouter vos livres pour les partager avec les autres{" "}
             </h5>
             <TextFieldGroup
               placeholder="Titre de livre"
@@ -105,7 +106,7 @@ class Popup extends Component {
             <button className="button-enregistrer" type="submit">
               Ajouter un livre
             </button>
-            <button onClick={this.props.closePopup}>close me</button>
+            <button onClick={this.props.closePopup}>Fermer</button>
           </form>
 
          

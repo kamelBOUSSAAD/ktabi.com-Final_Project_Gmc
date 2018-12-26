@@ -63,7 +63,7 @@ class Container extends Component {
         <div>
           <img src={notfound} width="80px" height="80px" alt="not-found(result"/>
         </div>
-        Auccn livre a votre profile
+        Aucun livre a votre profile
         </div> :
       this.props.books.map((currentElement, i) => (
         <div key={i}>
@@ -74,9 +74,9 @@ class Container extends Component {
     return (
       <div className="block">
         
-        <div className="block-1">
+        <div className="block-1 col-lg-4">
           <form className="add-book" onSubmit={this.onSubmit}>
-          <h5 className="desc-add-book"> Ajouter vous livres pour partager aves les lectures  </h5>
+          <h5 className="desc-add-book"> Ajouter vos livres pour partager aves les autres  </h5>
             <TextFieldGroup
               placeholder="Titre de livre"
               name="title"
@@ -125,7 +125,7 @@ class Container extends Component {
           </form>
         </div>
 
-        <div className="block-2" >
+        <div className="block-2 col-lg-8" >
           <BooksMap />
         </div>
       </div>

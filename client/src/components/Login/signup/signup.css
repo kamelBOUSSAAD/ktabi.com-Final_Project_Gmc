@@ -1,15 +1,12 @@
 .formContainer
-{
-   
+{ 
     height:auto;
     display: flex;
     justify-items: center;
     justify-content: center;
-    
     padding: 35px;
     margin-top:30px;
     margin-bottom: 30px;
-    border: 1px solid rgb(43, 42, 42) ;
 }
 .signup-title
 {
@@ -29,7 +26,8 @@
     display:flex;
 }
 
-.input-style{
+.input-style
+{
     width: 100%;
     padding: 3px;
     margin-bottom: 5px;
@@ -42,9 +40,9 @@
 {
     
     font-size : 20px;
-     width: 300px;
+    width: 300px;
     height: 40px;
-    margin-top: 9px;
+    border-radius:4px;
     background-color: rgb(247, 100, 3);
     color: white;
     border: 1px solid white
@@ -56,6 +54,8 @@
 }
 
 .title{
-  color: black;  
-padding-bottom: 10px;
+    font-size: 20px;
+    text-align:center;
+    padding: 2%;
+    font-weight: bold;
 }

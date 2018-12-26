@@ -7,13 +7,14 @@
     height: 200px;
 
 }
+
 .data{
     
     display: flex;
     flex-direction: column;
     justify-items: center;
     justify-content: center;
-   width: 100%;
+    width: 60%;
     
 }
 .option{
@@ -44,12 +45,7 @@
         color: white;
         border: 1px solid white
         }
-        .img-book{
-         
-        }
-
-     
-        .add-book{
+     .add-book{
             margin-top: 40px;
             display: block;
             padding-left: 30px;
@@ -59,22 +55,23 @@
             border: 1px solid rgb(255, 0, 0);
         }
 
-        .block{
+     .block{
             display: flex;
             flex-direction: row;
-            width: 100%;
-            border: 1px solid rgb(43, 42, 42); 
+            width:80%;
+            /* border: 1px solid rgb(43, 42, 42);  */
+            margin:0 auto;
 
         }
         .block-2{
             overflow: auto;
             height: 600px;
-            width: 60%
+            /* width: 60% */
         }
         .block-1{
            
             height: 600px;
-            width: 40%;
+            /* width: 40%; */
             margin : 20px;
             padding : 20px;
         }
@@ -91,8 +88,6 @@
             text-align: center;
             padding-top: 200px;
         }
-
-
 
         .popup {
             position: fixed;
