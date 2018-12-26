@@ -6,7 +6,7 @@ import {BrowserRouter, Route,Switch} from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './actions/authActions';
-import Landing from './components/layout/Landing';
+// import Landing from './components/layout/Landing';
 import PrivateRoute from './components/common/PrivateRoute';
 import { Provider } from 'react-redux';
 import store from './store';

@@ -164,7 +164,32 @@ router.put(
   }
   );
 
+// @route   GET api/books
+// @desc    GET all books 
+// @access  Public
+
+// server.get('/usersList', function(req, res) {
+//   Book.find({}, function(err, books) {
+//     var userMap = {};
+
+//     books.forEach(function(book) {
+//       userMap[book._id] = book;
+//     });
+
+//     res.send(userMap);  
+//   });
+// });
 
 
+router.get('/', (req, res) => {
+  Book.find({}, function(err, books) {
+    var userMap = [];
+    books.forEach(function(book) {
+      userMap.push(book);
+    });
+
+    res.send(userMap);  
+});
+})
 
 module.exports = router;

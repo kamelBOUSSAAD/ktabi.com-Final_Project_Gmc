@@ -3,10 +3,11 @@ import axios from "axios";
 import {
   GET_ERRORS,
   ADD_BOOK,
-  GET_BOOKS,
+  GET_ALL_BOOKS,
   BOOK_LOADING,
   DELETE_BOOK,
-  UPDATE_BOOK
+  UPDATE_BOOK,
+  GET_BOOKS,
 } from "./types";
 
 // Create book
@@ -27,7 +28,7 @@ export const addBook = bookData => dispatch => {
     );
 };
 
-// Get Books
+// Get Books by id user
 export const getBooks = userId => dispatch => {
   dispatch(setBookLoading());
   axios
@@ -85,6 +86,25 @@ export const updateBook = (bookData, id) => dispatch => {
       dispatch({
         type: GET_ERRORS,
         payload: err.response.data
+      })
+    );
+};
+
+// Get Books 
+export const getAllBooks = () => dispatch => {
+  // dispatch(setBookLoading());
+  axios
+    .get(`/api/book/`)
+    .then(res =>
+      dispatch({
+        type: GET_ALL_BOOKS,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ALL_BOOKS,
+        payload: null
       })
     );
 };

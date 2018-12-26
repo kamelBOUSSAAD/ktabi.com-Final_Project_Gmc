@@ -124,4 +124,23 @@ router.get(
   }
 );
 
+// @route   GET api/users/top
+// @desc    Return recent users
+// @access  Public
+
+router.get('/top', (req, res) => {
+   let userArray =[]
+  User.find().sort({date:-1}).exec(function(err, users) {
+    res.send(users); 
+  });
+  }); 
+
+
+
+
+
+
+
+
+
 module.exports = router;

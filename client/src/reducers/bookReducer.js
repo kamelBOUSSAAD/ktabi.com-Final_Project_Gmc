@@ -1,7 +1,7 @@
 import {
     ADD_BOOK,
     GET_BOOKS,
-    // GET_POST,
+    GET_ALL_BOOKS,
     DELETE_BOOK,
     BOOK_LOADING,
     UPDATE_BOOK
@@ -9,6 +9,7 @@ import {
   
   const initialState = {
     books:[],
+    all:[],
     loading: false
   };
   
@@ -24,10 +25,17 @@ import {
           ...state,
           loading: true
         };
+        
       case GET_BOOKS:
         return {
           ...state,
           books: action.payload,
+          loading: false
+        };
+        case GET_ALL_BOOKS:
+        return {
+          ...state,
+          all : action.payload,
           loading: false
         };
     //   case GET_POST:
