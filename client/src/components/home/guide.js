@@ -9,7 +9,7 @@ import Contact from '../../images/contact.jpg'
 const Guide=()=>{
     return (
         <div className="guideBody">
-        <div className="guideTitle"><h1>Pour Commencer</h1></div>
+        <div className="guideTitle"><h1>Comment ça marche?</h1></div>
         <div className="row guide-section">
         <div className="col-lg-3 col-sm-12 steps">
         <img alt="Profil" class="img-responsive" src={Icon}></img>
@@ -22,7 +22,7 @@ const Guide=()=>{
         </div>
         <div className="col-lg-3 col-sm-12 steps">
         <img alt="Profil" class="img-responsive" src={Search}></img>
-        <div className="textGuide">3-En utilisant notre moteur de recherche (classique ou avancé) et trouvez le livre qu'il vous faut.</div>
+        <div className="textGuide">3-Utilisez notre moteur de recherche et trouvez le livre qu'il vous faut.</div>
         </div>
         <div className="col-lg-3 col-sm-12 steps">
         <img alt="Profil" class="img-responsive" src={Contact}></img>

@@ -4,9 +4,10 @@ import './././search.css'
 class Search extends React.Component{
     render(){
         return(
-            <div className="search-header">
+        
             <div className="searchContainer">
-            <div className="searchbarStyle" style={{"margin-top":"50px"}}>
+            <div className="searchHeader"><h2>Trouver un Livre</h2></div>
+            <div className="searchbarStyle" style={{"margin-top":"30px"}}>
             <form>
            <input  className="searchBar" placeholder='Search...'></input>
            <button type="submit"><i class="fa fa-search"></i></button>
@@ -64,7 +65,7 @@ class Search extends React.Component{
              </div>
             </div>
             </div>
-            </div>
+        
         )
     }
 }

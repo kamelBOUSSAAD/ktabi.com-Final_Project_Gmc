@@ -95,14 +95,7 @@ class Register extends Component {
                   value={this.state.password2}
                   onChange={this.onChange}
                   error={errors.password2}
-                />
-                  
-                  
-                  
-                  
-                  
-
-                   
+                />               
         <div className="submit">
         <div><input type="submit" value ="S'inscrire" className="submit-button" /></div>
        

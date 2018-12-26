@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom'
 import "../login/login.css";
 import "../../../App.css";
 import PropTypes from "prop-types";
@@ -85,7 +86,7 @@ class Login extends Component {
             <button className="button-connexion" type="submit">
               Connexion
             </button>
-            <div className="oublie"> Inscrivez vous </div>
+            <div className="oublie"><Link to="">Inscrivez vous</Link></div>
             <div className="oublie"> Mot de passe oublié?</div>
           </form>
         </div>

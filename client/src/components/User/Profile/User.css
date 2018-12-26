@@ -25,9 +25,7 @@ text-align: left;
 margin-top: 30px;
 }
 
-.profile{
-    
-}
+
 
 .menu{
     margin-top: 20px;
@@ -43,8 +41,18 @@ margin-top: 30px;
     color: white;
     border: 1px solid white
     }
-
-
-    .img-container{
+    .img-container
+    {
     
     }
+    .userFace
+    {
+        width:90px; 
+        height:90px;
+        border-radius:50px;
+    }
+    .profile
+{
+   width:80%;
+   margin:0 auto; 
+}

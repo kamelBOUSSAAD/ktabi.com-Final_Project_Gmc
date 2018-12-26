@@ -12,13 +12,13 @@ return(
 <div className="card text-center" style={{"max-width": "210px","height":"100%","margin-bottom":"15px"}}>
 
 <div className="card-body">
-<h4 className="">{book.title}</h4>
+<h4 className="">Harry Potter Harry Potter Harry Potter</h4>
 <div>
 <StarRating starNumber={2} changeNumberRating={()=>{}} />
 </div>
     <Link to=""><img className="imageStyle" src={bookImage} alt=""/></Link>
 <div className="bookDescription">
-<p>{book.description}</p>
+<p>abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef </p>
 </div>
 <Link to="/"><button>{book.operation}</button></Link>
 </div>

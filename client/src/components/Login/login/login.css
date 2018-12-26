@@ -1,18 +1,14 @@
-.login-form { 
- 
- 
-  }
-
-
+    
   .form { 
     display: block;
     border-width: 1px;
-    width: 35%;
-    MARGIN-left: 350px;
+    width: 28%;
+    margin:0 auto;
   }
 
   .login-title{
- font-size: 18px;
+ font-size: 20px;
+ text-align:center;
  padding: 2%;
  font-weight: bold;
   }

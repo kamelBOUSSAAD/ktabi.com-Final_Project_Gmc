@@ -38,22 +38,22 @@ class Items extends Component {
             <h4>Auteur :{this.props.book.author}</h4>
           </div>
           <div>
-            <h4>Evalution : {this.props.book.rate}</h4>
+            <h4>Evaluation : {this.props.book.rate}</h4>
           </div>
           <div>
             <h4>Evalution : {this.props.book._id}</h4>
           </div>
           <div>
-            <h4>Déscription :{this.props.book.description}</h4>
+            <h4>Description :{this.props.book.description}</h4>
           </div>
           <div>
             <h4>L'opération proposé est : {this.props.book.operation}</h4>
           </div>
           <div>
-            <h4>Cette livre est publié par : {this.props.book.user.name}</h4>
+            <h4>Ce livre est publié par : {this.props.book.user.name}</h4>
           </div>
           <div>
-            <h4>Publieé le : {this.props.book.date.slice(0, 10)}</h4>
+            <h4>Publié le : {this.props.book.date.slice(0, 10)}</h4>
           </div>
         </div>
         <div className="option">

@@ -32,12 +32,12 @@ class UserProfile extends Component {
       profile.location = !isEmpty(profile.location) ? profile.location : "";
       userProfile = (
         <div className="user-data">
-          <h1 className="display-4 text-left">Bienvenue : {user.name}</h1>
+          <h1 className="display-4 text-left">Bienvenue {<span style={{"font-weight":"600"}}>{user.name}</span>} chez Ktabi</h1>
 
-          <p> please add some info</p>
+          <p>S'il vous plaît ajouter vos informations</p>
           <div className="data-container">
             <div className="img-container">
-              <img src={user.avatar} width = '110px' height = '110px' alt="img-avatar" />
+              <img src={user.avatar} className="userFace" alt="img-avatar" />
             </div>
             <div className="data">
               <h3 className="data">Nom : {user.name}</h3>
