@@ -29,10 +29,10 @@ class BodyHome extends Component {
         <div>
           {/* <img src={} width="80px" height="80px" alt="not-found(result"/> */}
         </div>
-        Auccn livre a votre profile
+        Aucun livre a votre profile
         </div> :
       this.props.allBooks.map((currentElement, i) => (
-        <div key={i}>
+        <div className="col-lg-6" key={i}>
           <Item book={currentElement} />
         </div>
         
@@ -60,7 +60,7 @@ class BodyHome extends Component {
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-recent-tab">...</div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-top-tab">...</div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-top-tab"></div>
 </div>
         
           </div>
@@ -69,27 +69,13 @@ class BodyHome extends Component {
      
      
 
-      <div className="BooksContent">
+      <div className="row BooksContent">
+      <div className="BookMap">
       <BooksMap />
-      {/* <div className="bookStyle"><Book/></div>
-      <div className="bookStyle"><Book/></div>
-      <div className="bookStyle"><Book/></div>
-      <div className="bookStyle"><Book/></div>
-      <div className="bookStyle"><Book/></div> */}
+      </div>
       </div>
     <div> 
-
-
-  {/* <ul className="pagination">
-    <li><Link to="">1</Link></li>
-    <li><Link to="">2</Link></li>
-    <li><Link to="">3</Link></li>
-    <li><Link to="">4</Link></li>
-    <li><Link to="">5</Link></li>
-  </ul> */}
   </div> 
-
-
      </div>
         
     )

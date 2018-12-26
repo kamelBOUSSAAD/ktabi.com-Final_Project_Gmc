@@ -3,6 +3,7 @@ import TextFieldGroup from "../../common/TextFieldGroup";
 import PropTypes from "prop-types";
 import { addBook, getBooks } from "../../../actions/bookActions";
 import { loginUser } from "../../../actions/authActions";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import notfound from '../../../images/nothing-found.png'
 
 
@@ -72,7 +73,7 @@ class Container extends Component {
         
       ));
     return (
-      <div className="block">
+      <div className=" block">
         
         <div className="block-1 col-lg-4">
           <form className="add-book" onSubmit={this.onSubmit}>

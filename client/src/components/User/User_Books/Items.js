@@ -30,44 +30,41 @@ class Items extends Component {
         <div className="img-book">
           <img src={coverBook} width="130px" height="100%" alt="bookimg" />
         </div>
-        <div className="data">
+        <div className="data bookInfo">
           <div>
-            <h4>Titre : {this.props.book.title}</h4>
+            <h4>Titre : <span>{this.props.book.title}</span></h4>
           </div>
           <div>
-            <h4>Auteur :{this.props.book.author}</h4>
+            <h4>Auteur :<span>{this.props.book.author}</span></h4>
           </div>
           <div>
-            <h4>Evaluation : {this.props.book.rate}</h4>
+            <h4>Evaluation : <span>{this.props.book.rate}</span></h4>
+          </div>
+          
+          <div>
+            <h4>Description :<span>{this.props.book.description}</span></h4>
           </div>
           <div>
-            <h4>Evalution : {this.props.book._id}</h4>
+            <h4>L'opération proposé est : <span>{this.props.book.operation}</span></h4>
           </div>
           <div>
-            <h4>Description :{this.props.book.description}</h4>
+            <h4>Ce livre est publié par :<span>{this.props.book.user.name}</span></h4>
           </div>
           <div>
-            <h4>L'opération proposé est : {this.props.book.operation}</h4>
-          </div>
-          <div>
-            <h4>Ce livre est publié par : {this.props.book.user.name}</h4>
-          </div>
-          <div>
-            <h4>Publié le : {this.props.book.date.slice(0, 10)}</h4>
+            <h4>Publié le : <span>{this.props.book.date.slice(0, 10)}</span></h4>
           </div>
         </div>
         <div className="option">
-          <button
+          <button type="button"
             onClick={this.onDeleteClick.bind(this, this.props.book._id)}
-            className="button-supprimer"
-          >
+            className="btn btn-danger">
+          
             {" "}
             Supprimer
           </button>
-          <button
-            className="button-modifier"
+          <button type="button"
             onClick={this.togglePopup.bind(this)}
-          >
+            className="btn btn-info">
             {" "}
             Modifier
           </button>

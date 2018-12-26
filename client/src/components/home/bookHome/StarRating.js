@@ -1,4 +1,5 @@
 import React from "react";
+import '../bookHome/StarRating.css'
 
 const StarRating = props => {
   let starsList = [];

@@ -26,6 +26,11 @@
     /* justify-content:space-between; */
     flex-flow: wrap;    
 }
+.BookMap
+{
+    /* margin-left:5px; */
+    margin-bottom:15px;
+}
 .bookStyle
 {
     margin-left:20px;
@@ -37,4 +42,5 @@
 .pagination
 {
    margin-left:30%;
+   
 }
