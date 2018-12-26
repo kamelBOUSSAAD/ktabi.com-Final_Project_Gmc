@@ -23,8 +23,6 @@ class UserProfile extends Component {
     } else {
       const profile = this.props.profile.profile;
 
-    
-
       // If profile field doesnt exist, make empty string
       profile.location = !isEmpty(profile.location) ? profile.location : "";
       profile.address = !isEmpty(profile.address) ? profile.address : " ";
@@ -48,14 +46,17 @@ class UserProfile extends Component {
               <h3 className="data">Date de profile: {profile.date}</h3>
             </div>
           </div>
+        
         </div>
-      );
-    }
+    );
+    
 
+      }
     return (
       <div className="profile">
         {userProfile}
         <div className="menu">
+         
           <Link to="/user-books">
             <button className="button-menu" type="">
               Mes livres
@@ -67,6 +68,7 @@ class UserProfile extends Component {
               Editer le profil
             </button>
           </Link>
+
         </div>
       </div>
     );

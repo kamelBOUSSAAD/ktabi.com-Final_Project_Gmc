@@ -12,8 +12,8 @@ class UserRouter extends Component {
          <User/>
           <div>
          
-          <Route exact path="/edit-profile" render={ ()=><Edit_Books/>}/>
-          <Route exact path="/user-books" render={ ()=><User_Books/>} />
+          <Route  path="/edit-profile" render={ ()=><Edit_Books/>}/>
+          <Route  path="/user-books" render={ ()=><User_Books/>} />
           </div>
         </div>
       </BrowserRouter>

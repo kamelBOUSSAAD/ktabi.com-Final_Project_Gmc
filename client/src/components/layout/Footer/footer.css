@@ -62,7 +62,8 @@ width: 450px;
         background-color: #444;
         border-bottom: 5px solid #ff7a00;
         height:260px;  
-        width:100%;    
+        width:100%; 
+        margin-top: 600px   
     }
     .footer-content
     {
