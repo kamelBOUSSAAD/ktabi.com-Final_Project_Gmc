@@ -8,7 +8,6 @@ import notfound from '../../../images/nothing-found.png'
 
 
 import Items from "./Items";
-
 import { connect } from "react-redux";
 
 class Container extends Component {
@@ -20,7 +19,8 @@ class Container extends Component {
       description: "",
       operation: "",
       categorie: "",
-      errors: {}
+      errors: {},
+      books:this.props.books
     };
 
     this.onChange = this.onChange.bind(this);
@@ -30,15 +30,30 @@ class Container extends Component {
   componentDidMount() {
     const { user } = this.props.auth;
     this.props.getBooks(user.id);
+    this.setState({
+      errors: this.props.errors,
+      books: this.props.books
+     });
     // this.setState({ books: this.props.books.books });
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
-      this.setState({ errors: nextProps.errors });
+      this.setState({
+        errors: nextProps.errors,
+        books: nextProps.books
+       });
     }
   }
-
+  clearForm = () => {
+    this.setState({
+      title: '',
+      author: '',
+      description: '',
+      operation: '',
+      categorie: ''
+    })
+  }
   onSubmit(e) {
     e.preventDefault();
     const bookData = {
@@ -49,7 +64,9 @@ class Container extends Component {
       categorie: this.state.categorie
     };
 
-    this.props.addBook(bookData, this.props.history);
+    this.props.addBook(bookData, this.props.history)
+      .then(() => this.clearForm()
+      )
   }
 
   onChange(e) {
@@ -57,16 +74,18 @@ class Container extends Component {
   }
   render() {
     const { errors } = this.state;
+    const { books } = this.state;
   
     const BooksMap = () =>
-    this.props.books.length===0 ? 
+   books == null || books== undefined ? 
+
        <div className="book-null"> 
         <div>
           <img src={notfound} width="80px" height="80px" alt="not-found(result"/>
         </div>
         Aucun livre a votre profile
         </div> :
-      this.props.books.map((currentElement, i) => (
+          books.map((currentElement, i) => (
         <div key={i}>
           <Items book={currentElement} />
         </div>

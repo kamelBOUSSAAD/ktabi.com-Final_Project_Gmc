@@ -57,13 +57,13 @@ class UserProfile extends Component {
         {userProfile}
         <div className="menu">
          
-          <Link to="/user-books">
+          <Link to="/profile/user-books">
             <button className="button-menu" type="">
               Mes livres
             </button>
           </Link>
 
-          <Link to="/edit-profile">
+          <Link to="/profile/edit-profile">
             <button className="button-menu" type="">
               Editer le profil
             </button>

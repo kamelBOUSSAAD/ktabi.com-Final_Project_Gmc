@@ -9,21 +9,21 @@ class Popup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    title: this.props.book.title,
-    author: this.props.book.author,
-    description: this.props.book.description,
-    operation: this.props.book.operation,
-    categorie: this.props.book.categorie,
-    errors: {}
+      title: "",
+      author: "",
+      description: "",
+      operation: "",
+      categorie: "",
+      errors: this.props.errors
     };
     this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onSub = this.onSub.bind(this);
   }
 
   componentDidMount() {
-  this.setState({
-      errors :this.props.errors
-  })
+    this.setState({
+      errors: this.props.errors,
+     });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,11 +32,10 @@ class Popup extends Component {
     }
   }
   
-
-  onSubmit(e) {
-    e.preventDefault();
+  onSub(e) {
+    console.log("xcdfdfd")
+    
     const bookData = {
-        
       title: this.state.title,
       author: this.state.author,
       description: this.state.description,
@@ -44,7 +43,8 @@ class Popup extends Component {
       categorie: this.state.categorie
     };
 
-    this.props.updateBook(bookData, this.props.book._id);
+   this.props.updateBook(bookData, this.props.book.id);
+ 
   }
 
   onChange(e) {
@@ -56,13 +56,10 @@ class Popup extends Component {
     return (
       <div className="popup">
         <div className="popup_inner">
-          <form className="add-book" onSubmit={this.onSubmit}>
-            <h5 className="desc-add-book">
-              {" "}
-              Ajouter vos livres pour les partager avec les autres{" "}
-            </h5>
+          <form className="add-book" >
+            
             <TextFieldGroup
-              placeholder="Titre de livre"
+              placeholder={this.props.book.title}
               name="title"
               value={this.state.title}
               onChange={this.onChange}
@@ -71,7 +68,7 @@ class Popup extends Component {
             />
 
             <TextFieldGroup
-              placeholder="Auteur"
+              placeholder={this.props.book.author}
               name="author"
               value={this.state.author}
               onChange={this.onChange}
@@ -79,7 +76,7 @@ class Popup extends Component {
               info=""
             />
             <TextFieldGroup
-              placeholder="Description"
+              placeholder={this.props.book.description}
               name="description"
               value={this.state.description}
               onChange={this.onChange}
@@ -87,7 +84,7 @@ class Popup extends Component {
               info=""
             />
             <TextFieldGroup
-              placeholder="operation"
+              placeholder={this.props.book.operation}
               name="operation"
               value={this.state.operation}
               onChange={this.onChange}
@@ -95,7 +92,7 @@ class Popup extends Component {
               info=""
             />
             <TextFieldGroup
-              placeholder="categorie"
+              placeholder={this.props.book.categorie}
               name="categorie"
               value={this.state.categorie}
               onChange={this.onChange}
@@ -103,10 +100,10 @@ class Popup extends Component {
               info=""
             />
 
-            <button className="button-enregistrer" type="submit">
-              Ajouter un livre
+            <button className="button-enregistrer" >
+             Enregistrer
             </button>
-            <button onClick={this.props.closePopup}>Fermer</button>
+           
           </form>
 
          
@@ -122,7 +119,7 @@ Popup.propTypes = {
   };
   
   const mapStateToProps = state => ({
-    errors: state.errors,
+    errors: state.books.errorsUpdate,
 
   });
   

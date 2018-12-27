@@ -4,12 +4,14 @@ import {
     GET_ALL_BOOKS,
     DELETE_BOOK,
     BOOK_LOADING,
-    UPDATE_BOOK
+    UPDATE_BOOK,
+    GET_ERRORS_BOOK
   } from '../actions/types';
   
   const initialState = {
     books:[],
     all:[],
+    errorsUpdate:{},
     loading: false
   };
   
@@ -38,6 +40,12 @@ import {
           all : action.payload,
           loading: false
         };
+        case GET_ERRORS_BOOK:
+        return {
+         errorsUpdate: action.payload,
+
+        };
+        
     //   case GET_POST:
     //     return {
     //       ...state,

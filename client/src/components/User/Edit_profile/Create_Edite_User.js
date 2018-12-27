@@ -49,7 +49,6 @@ class CreateProfile extends Component {
       profile.address = !isEmpty(profile.address) ? profile.address : "";
       profile.phone = !isEmpty(profile.phone) ? profile.phone : "";
       profile.location = !isEmpty(profile.location) ? profile.location : "";
-  
 
       // Set component fields state
       this.setState({
@@ -79,17 +78,13 @@ class CreateProfile extends Component {
   }
 
   render() {
- 
     const { errors } = this.state;
 
     return (
-
       <div className="edit">
-      
         <h1 className="display-4 text-left">Editer le profil</h1>
         <small className="champ">* = champs obligatoires</small>
         <div>
-          
           <form className="data-form" onSubmit={this.onSubmit}>
             <TextFieldGroup
               placeholder="Nom de profile"
@@ -125,12 +120,9 @@ class CreateProfile extends Component {
               info=""
             />
 
-
-            
             <button className="button-enregistrer" type="submit">
-            Enregistrer
+              Enregistrer
             </button>
-          
           </form>
         </div>
       </div>

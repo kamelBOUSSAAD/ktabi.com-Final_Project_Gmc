@@ -8,11 +8,12 @@ import {
   DELETE_BOOK,
   UPDATE_BOOK,
   GET_BOOKS,
+  GET_ERRORS_BOOK,
 } from "./types";
 
 // Create book
 export const addBook = bookData => dispatch => {
-  axios
+  return axios
     .post("/api/book", bookData)
     .then(res =>
       dispatch({
@@ -84,7 +85,7 @@ export const updateBook = (bookData, id) => dispatch => {
     )
     .catch(err =>
       dispatch({
-        type: GET_ERRORS,
+        type: GET_ERRORS_BOOK,
         payload: err.response.data
       })
     );

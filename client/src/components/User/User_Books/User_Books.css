@@ -95,24 +95,15 @@
             padding-top: 200px;
         }
 
-        .popup {
-            position: fixed;
-            width: 79%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            background-color: rgba(0,0,0, 0.5);
+        .fermer-model{
+
+            
+        }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: red;
+            opacity: 1; /* Firefox */
           }
-          .popup_inner {
-            position: absolute;
-            left: 25%;
-            right: 25%;
-            top: 25%;
-            bottom: 25%;
-            margin: auto;
-            background: white;
-            height: 76%;
+          .popup{
+              width:400px;
           }

@@ -15,5 +15,7 @@ export const UPDATE_BOOK = 'UPDATE_BOOK';
 export const GET_ALL_BOOKS = 'GET_ALL_BOOKS';
 
 export const GET_RECENT_USERS = 'GET_RECENT_USERS';
+export const GET_ERRORS_BOOK = 'GET_ERRORS_BOOK';
+
 
 

@@ -96,7 +96,7 @@ router.put(
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     const { errors, isValid } = validateBookInput(req.body);
-
+    console.log(req.body, errors , isValid)
     // Check Validation
     if (!isValid) {
       // Return any errors with 400 status
@@ -116,7 +116,7 @@ router.put(
         Book.findOneAndUpdate(
           { _id: req.params.id },
           { $set: bookFields }
-        ).then(book => res.json(book)
+        ).then(book => res.json({book})
         // .catch(err => res.json({error : true}))
         
         );
