@@ -26,28 +26,13 @@ class BodyHome extends Component {
     const BooksMap = () =>
     !this.props.allBooks.length===0 ? 
        <div className="book-null"> 
-        <div>
-          {/* <img src={} width="80px" height="80px" alt="not-found(result"/> */}
-        </div>
         Aucun livre a votre profile
         </div> :
       this.props.allBooks.map((currentElement, i) => (
         <div className="col-lg-6" key={i}>
           <Item book={currentElement} />
-        </div>
-        
-   
-    // const BooksMap = () =>
-     
-    //   this.props.allBooks.map((currentElement, i) => (
-    //     <div key={i}>
-    //       <Item book={currentElement} />
-    //     </div>
-        
+        </div>  
     ));
-    
-
-  
     return(
     <div className="">
       <div className="BooksHeader">

@@ -21,7 +21,7 @@ class UsersRecent extends Component {
         <div>
           {/* <img src={} width="80px" height="80px" alt="not-found(result"/> */}
         </div>
-        Auccn livre a votre profile
+        Aucun livre a votre profile
         </div> :
       this.props.users.map((currentElement, i) => (
         <div key={i}>
@@ -33,7 +33,7 @@ class UsersRecent extends Component {
     return(
         <div className="user-div">
         <div className="users-group">
-        <div className="topUsers"><h2>Top Users</h2></div>
+        <div className="topUsers"><h2>Utilisateurs Recents</h2></div>
         <UsersMap />
         </div>
         </div>
