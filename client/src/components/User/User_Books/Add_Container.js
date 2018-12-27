@@ -77,7 +77,7 @@ class Container extends Component {
     const { books } = this.state;
   
     const BooksMap = () =>
-   books == null || books== undefined ? 
+   books == null || books=== undefined ? 
 
        <div className="book-null"> 
         <div>

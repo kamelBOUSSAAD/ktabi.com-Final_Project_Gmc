@@ -33,7 +33,7 @@ class Popup extends Component {
   }
   
   onSub(e) {
-    console.log("xcdfdfd")
+    e.preventDefault()
     
     const bookData = {
       title: this.state.title,

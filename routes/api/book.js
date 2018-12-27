@@ -1,102 +1,89 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const gravatar = require('gravatar');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const keys = require('../../config/keys');
-const passport = require('passport');
-
-
+const gravatar = require("gravatar");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const keys = require("../../config/keys");
+const passport = require("passport");
 
 // Load Input Validation
-const validateBookInput = require('../../validation/book');
-const validateRateInput = require('../../validation/rate');
+const validateBookInput = require("../../validation/book");
+const validateRateInput = require("../../validation/rate");
 
 // Load Book model
-const Book = require('../../models/Book');
-
-
+const Book = require("../../models/Book");
 
 // @route   POST api/book/
 // @desc    Create user book
 // @access  Private
-
 router.post(
-    '/',
-    passport.authenticate('jwt', { session: false }),
-    (req, res) => {
-      const { errors, isValid } = validateBookInput(req.body);
+  "/",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    const { errors, isValid } = validateBookInput(req.body);
 
-        // Check Validation
-        if (!isValid) {
-          return res.status(400).json(errors);
-        }
-    
-        // Get fields
-        const bookFields = {};
-        bookFields.user = req.user.id;
-       // bookFields.categerie = req.categerie.id;
+    // Check Validation
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
 
-        if (req.body.title) bookFields.title = req.body.title;
-        if (req.body.author) bookFields.author = req.body.author;
-        if (req.body.description) bookFields.description = req.body.description;
-        if (req.body.operation) bookFields.operation = req.body.operation;
-        if (req.body.categorie) bookFields.categorie = req.body.categorie;
-    
-        // Save book
-         new  Book(bookFields).save().then(book => res.json(book));
-                   
-     }
- );
-        
+    // Get fields
+    const bookFields = {};
+    bookFields.user = req.user.id;
+    // bookFields.categerie = req.categerie.id;
+
+    if (req.body.title) bookFields.title = req.body.title;
+    if (req.body.author) bookFields.author = req.body.author;
+    if (req.body.description) bookFields.description = req.body.description;
+    if (req.body.operation) bookFields.operation = req.body.operation;
+    if (req.body.categorie) bookFields.categorie = req.body.categorie;
+
+    // Save book
+    new Book(bookFields).save().then(book => res.json(book));
+  }
+);
 
 // @route   POST api/book:userID
 // @desc    GET all books of user
 // @access  Public
-router.get('/:user_id', (req, res) => {
-    const errors = {};
-  
-    Book.find({ user: req.params.user_id })
-      .populate('user', ['name', 'avatar'])
-      .then(book => {
-        if (!book) {
-          errors.nobook = 'There is no book for this user';
-          res.status(404).json(errors);
-        }
+router.get("/:user_id", (req, res) => {
+  const errors = {};
 
-        res.json(book);
-      })
-      .catch(err => res.status(404).json(err));
- 
-  });
-        
+  Book.find({ user: req.params.user_id })
+    .populate("user", ["name", "avatar"])
+    .then(book => {
+      if (!book) {
+        errors.nobook = "There is no book for this user";
+        res.status(404).json(errors);
+      }
 
-  
+      res.json(book);
+    })
+    .catch(err => res.status(404).json(err));
+});
+
 // @route   DELETE api/profile
 // @desc    Delete user and profile
 // @access  Private
 router.delete(
-  '/:id',
-  passport.authenticate('jwt', { session: false }),
+  "/:id",
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    Book.findOneAndRemove({ _id: req.params.id}).then(() => {
-      res.json({ success: true })
-      .catch(err => res.json({error : true}))
+    Book.findOneAndRemove({ _id: req.params.id }).then(() => {
+      res.json({ success: true }).catch(err => res.json({ error: true }));
     });
   }
 );
-      
-
 
 // @route   PUT api/book
-// @desc    edit book by id user  
+// @desc    edit book by id user
 // @access  Private
 router.put(
-  '/:id',
-  passport.authenticate('jwt', { session: false }),
+  "/:id",
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const { errors, isValid } = validateBookInput(req.body);
-    console.log(req.body, errors , isValid)
+    console.log(req.body, errors, isValid);
     // Check Validation
     if (!isValid) {
       // Return any errors with 400 status
@@ -112,34 +99,22 @@ router.put(
     if (req.body.operation) bookFields.operation = req.body.operation;
     if (req.body.categorie) bookFields.categorie = req.body.categorie;
 
-        // Update
-        Book.findOneAndUpdate(
-          { _id: req.params.id },
-          { $set: bookFields }
-        ).then(book => res.json({book})
-        // .catch(err => res.json({error : true}))
-        
-        );
-      
-
-
+    // Update
+    Book.findOneAndUpdate({ _id: req.params.id }, { $set: bookFields }).then(
+      book => res.json({ book })
+      // .catch(err => res.json({error : true}))
+    );
   }
-  );
-      
-   
-
-
-
-
+);
 
 // @route   POST api/book/rate
-// @desc    raiting book by user 
+// @desc    raiting book by user
 // @access  Private
 router.put(
-  '/rate/:id',
-  passport.authenticate('jwt', { session: false }),
+  "/rate/:id",
+  passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    const { errors, isValid } = validateRateInput({rate:req.body.rate});
+    const { errors, isValid } = validateRateInput({ rate: req.body.rate });
 
     // Check Validation
     if (!isValid) {
@@ -151,45 +126,26 @@ router.put(
     const rateBookField = {};
     if (req.body.rate) rateBookField.rate = req.body.rate;
 
-        // Update
-        Book.findOneAndUpdate(
-          { _id: req.params.id },
-          { $set: rateBookField }
-        ).then(book => res.json({rating : 'ok'})
-        .catch(err => res.json(err))
-        );
-      
-
-
+    // Update
+    Book.findOneAndUpdate({ _id: req.params.id }, { $set: rateBookField }).then(
+      book => res.json({ rating: "ok" }).catch(err => res.json(err))
+    );
   }
-  );
+);
 
 // @route   GET api/books
-// @desc    GET all books 
+// @desc    GET all books
 // @access  Public
 
-// server.get('/usersList', function(req, res) {
-//   Book.find({}, function(err, books) {
-//     var userMap = {};
-
-//     books.forEach(function(book) {
-//       userMap[book._id] = book;
-//     });
-
-//     res.send(userMap);  
-//   });
-// });
-
-
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   Book.find({}, function(err, books) {
     var userMap = [];
     books.forEach(function(book) {
       userMap.push(book);
     });
 
-    res.send(userMap);  
+    res.send(userMap);
+  });
 });
-})
 
 module.exports = router;

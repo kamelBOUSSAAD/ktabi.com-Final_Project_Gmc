@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link, withRouter } from "react-router-dom";
+// import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import TextFieldGroup from "../../common/TextFieldGroup";
-// import User from '../User';
-// import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-// import InputGroup from '../common/InputGroup';
-// import SelectListGroup from '../common/SelectListGroup';
+
 import "./edit.css";
 import {
   createProfile,
@@ -40,9 +37,6 @@ class CreateProfile extends Component {
 
     if (nextProps.profile.profile) {
       const profile = nextProps.profile.profile;
-
-      // Bring skills array back to CSV
-      //   const skillsCSV = profile.skills.join(',');
 
       // If profile field doesnt exist, make empty string
       profile.location = !isEmpty(profile.location) ? profile.location : "";
@@ -145,4 +139,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { createProfile, getCurrentProfile }
-)(withRouter(CreateProfile));
+)((CreateProfile));

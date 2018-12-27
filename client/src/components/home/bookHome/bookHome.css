@@ -32,5 +32,6 @@ width:100px;
 
 .imageStyle
 {
-    border:3px solid #ff7a00
+    border:2px solid #a8a8a8;
+    margin-bottom: 7px;
 }

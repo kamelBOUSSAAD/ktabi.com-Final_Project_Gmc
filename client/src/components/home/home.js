@@ -2,7 +2,7 @@ import React from 'react'
 import Search from '../Search/search.js'
 import BodyHome from '../bodyHome/bodyHome.js'
 import RecentUsers from '../home/Recent-User/recentUsers'
-import Guide from '../home/guide'
+// import Guide from '../home/guide'
 import '../home/home.css'
 
 const Home=()=>{
@@ -17,7 +17,7 @@ const Home=()=>{
      <div className="col-lg-3 col-md-3 col-sm-12">
      <RecentUsers/>
      </div>
-     <Guide/>
+ 
      </div> 
     )
 }
